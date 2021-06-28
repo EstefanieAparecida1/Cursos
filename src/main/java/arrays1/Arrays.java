@@ -5,7 +5,7 @@ public class Arrays {
 	public static void main(String[] Args) {
 
 		// Arrays string (armazena texto)serve pra criação de lista.
-		// Arrays numeros(armazena numeros) serve para criação de lista.
+		// Arrays numeros interios (armazena numeros) serve para criação de lista.
 
 		String[] lista_nome = { "Pedro", "Rafael", "Maria" };
 		                          //0      //1       //2
