@@ -3,11 +3,10 @@ package logicos1;
 public class operadors {
 
 	public static void main(String[] args) {
-//pra dar vrdadeiro precisa que ambas os lados sejam verdadeiros.
-		
+//pra dar verdadeiro precisa que ambas os lados sejam verdadeiros.
 		// && e, || ou
 
-		if (10 ==10 && 200<20) {
+		if (10 ==10 && 200 < 20) {
 
 			System.out.println("verdadeiro");
 		} else {
@@ -16,7 +15,7 @@ public class operadors {
 		}
 // aqui se um dos lados for verdadeiro o resultado é verdadeiro
 		
-		if (25 ==25 || 25<20) {
+		if (25 == 25 || 25 < 20) {
 
 			System.out.println("verdadeiro");
 		} else {
