@@ -17,35 +17,62 @@ public class Medidas {
 		int Homem = 0;
 		double AlturaM = 0;
 		double AlturaH = 0;
-		
+		double MaiorH = 0;
+		double MenorH = 999999999;
+		double MaiorM = 0;
+		double MenorM = 888888888;
+		double MediaH = 0;
+		double MediaM = 0;
 
-		for (int Quantidade = 0; Quantidade < 2; Quantidade += 1) {
+		for (int Quantidade = 0; Quantidade < 6; Quantidade += 1) {
 
 			System.out.println("Qual Genero Você se identifica? ");
 			String resposta = ler.next();
 
 			if (resposta.equals("Mulher")) {
 				Mulher++;
-				System.out.println("Qual a sua altura Mulher? ");
+				System.out.println("Qual a sua altura Mulher?(usando virgula) ");
 				AlturaM = ler.nextDouble();
-			}
-			else if (resposta.equals("Homem")) {
+				if (AlturaM > MaiorM) {
+					MaiorM = AlturaM;
+				} else if (AlturaM < MenorM) {
+					MenorM = AlturaM;
+				}
+
+			} else if (resposta.equals("Homem")) {
 				Homem++;
-				System.out.println("Qual a sua altura Homem? ");
+				System.out.println("Qual a sua altura Homem?(usando virgula) ");
 				AlturaH = ler.nextDouble();
+				if (AlturaH > MaiorH) {
+					MaiorH = AlturaH;
+				} else if (AlturaH < MenorH) {
+					MenorH = AlturaH;
+
+				} else {
+					System.out.println("Invalido");
+					Quantidade--;
+				}
 				
-			} else {
-				System.out.println("Invalido");
-				Quantidade--;
 			}
-			
 			
 		}
+		
+		MediaH = MaiorH + MenorH;
+		MediaH = MediaH / Homem;
+		
+		MediaM = MaiorM + MenorM;
+		MediaM = MediaM / Mulher;
 
 		System.out.println("Quantidade de Mulher:" + Mulher);
 		System.out.println("Quantidade de Homem: " + Homem);
-
-
+		
+		System.out.println("Maior do grupo Mulheres: " + MaiorM);
+		System.out.println("Menor do grupo Mulheres: " + MenorM);
+		
+		System.out.println("Maior do grupo Homens: " + MaiorH);
+		System.out.println("Menor do grupo Homens: " + MenorH);
+		
+		System.out.println("Media altura Homens: " + MediaH);
+		System.out.println("Media altura Mulher: " + MediaM);
 	}
-
 }
